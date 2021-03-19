@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CPU Scheduling Solver!</title>
+
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+<div class="block" style="text-align: center;">
+    <h1>CPU Scheduling Solver!</h1>
+    by Arose Niazi
+</div>
+<div class="block">
+    <form autocomplete="on">
+        <table width="100%" id="ProcessesList">
+            <tr>
+                <th colspan="4">Processes Information</th>
+            </tr>
+            <tr>
+                <th><label for="L1">Process Label</label></th>
+                <th><label for="AT1">Arrival Time</label></th>
+                <th><label for="BT1">Burst Time</label></th>
+                <th><label for="P1">Priority Time</label></th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" maxlength="5" name="L1" id="L1" placeholder="Enter Process 1 Label" autocomplete="on" required/>
+                </td>
+                <td>
+                    <input type="number" name="AT1" id="AT1" placeholder="Enter Arrival Time" autocomplete="on" required/>
+                </td>
+                <td>
+                    <input type="number" name="BT1" id="BT1" placeholder="Enter Burst Time" autocomplete="on" required/>
+                </td>
+                <td>
+                    <input type="number" name="PT1" id="P1" placeholder="Enter Priority Time" autocomplete="on"/>
+                </td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <th colspan="2"><label for="CoresL">Cores</label></th>
+                <th colspan="2"><label for="QuantumL">Quantum Time</label></th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                <input type="number" name="Cores" id="CoresL" placeholder="Enter Cores" autocomplete="on" required/>
+                </td>
+                <td colspan="2">
+                    <input type="number" name="Quantum" id="QuantumL" placeholder="Enter Quantum Time" autocomplete="on"/>
+                </td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <th><label for="Algo">Algorithm</label> </th>
+            </tr>
+            <tr>
+                <td rowspan="4">
+                    <select id="Algo" name="Algo">
+                        <option value="1">First Come First Serve</option>
+                        <option value="2">Shortest Job First</option>
+                        <option value="3">Priority Non Preemptive</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <input type="button" value="Add Process" onclick="addProcess()" />
+        <input type="button" value="Reduce Process" onclick="removeProcess()" />
+        <input type="button" value="Calculate" onclick="readInput(Cores, Algo)" />
+        <input type="button" value="Clear output" onclick="clearOutput()" />
+        <!--<label for="typeOf">Type</label>
+        <select id="typeOf" name="Masking">
+            <option value="true">Variable Length Subnet Masking</option>
+            <option value="false">Fixed Length Subnet Masking</option>
+        </select>-->
+
+    </form>
+</div>
+<br>
+<div class="block">
+    <P id="Output">
+
+    </P>
+</div>
+</body>
+<footer>
+    <script src="Writer.js"></script>
+    <script src="Process.js"></script>
+    <script src="CPUAlgo.js"></script>
+    <script src="NonPreemptive.js"></script>
+    <script src="Runner.js"></script>
+</footer>
+</html>
