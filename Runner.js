@@ -9,7 +9,7 @@ let TotalProcess = 1;
 function addProcess() {
     TotalProcess++;
     let string = "<tr id='ProcessID" + TotalProcess + "'>";
-    string += '<td><input type="text" maxLength="5" id="L' + TotalProcess + '" placeholder="Enter Process 1 Label" required/></td>\n' +
+    string += '<td><input type="text" maxLength="5" id="L' + TotalProcess + '" placeholder="Enter Process ' + TotalProcess + ' Label" required/></td>\n' +
         '    <td><input type="number" id="AT' + TotalProcess + '" placeholder="Enter Arrival Time" required/></td>\n' +
         '    <td><input type="number" id="BT' + TotalProcess + '" placeholder="Enter Burst Time" required/></td>\n' +
         '    <td><input type="number" id="P' + TotalProcess + '" placeholder="Enter Priority Time"/></td>\n';
